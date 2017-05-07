@@ -29,6 +29,17 @@
                 android:background="@drawable/user_32"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="8dp"></Button>
+
+            <TextView
+                android:id="@+id/Yummy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="YUMMY"
+                android:textColor="#FFFFFF"
+                android:visibility="visible"
+                android:textSize="32dp"/>
         </RelativeLayout>
 
         <RelativeLayout
