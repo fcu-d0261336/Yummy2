@@ -12,7 +12,7 @@ public class CuisineActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_main2);
         Button main_button=(Button)findViewById(R.id.main_btn);
         main_button.setOnClickListener(back_main);
         Button res_button=(Button)findViewById(R.id.res_btn);
