@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_weight="1"
-                android:text="main" />
+                android:text="透骨新鲜" />
 
             <Button
                 android:id="@+id/cuisine_btn"
@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_weight="1"
-                android:text="cuisine" />
+                android:text="一道菜" />
 
             <Button
                 android:id="@+id/res_btn"
@@ -81,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_weight="1"
-                android:text="restaurant" />
+                android:text="一家店" />
         </LinearLayout>
     </LinearLayout>
 

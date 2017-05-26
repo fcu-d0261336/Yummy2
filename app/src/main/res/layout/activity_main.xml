@@ -64,17 +64,17 @@
                 android:id="@+id/main_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:layout_weight="1"
-                android:text="main"
-                android:layout_centerVertical="true"/>
+                android:text="透骨新鲜" />
 
             <Button
                 android:id="@+id/cuisine_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:layout_weight="1"
-                android:text="cuisine"
-                android:layout_centerVertical="true"/>
+                android:text="一道菜" />
 
             <Button
                 android:id="@+id/res_btn"
@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_weight="1"
-                android:text="restaurant" />
+                android:text="一家店" />
         </LinearLayout>
     </LinearLayout>
 

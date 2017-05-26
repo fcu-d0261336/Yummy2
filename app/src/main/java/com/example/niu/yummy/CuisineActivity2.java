@@ -23,6 +23,8 @@ public class CuisineActivity2 extends AppCompatActivity {
 /////////////////////////////////////////////////////////////////////////////////////////////
         //WebView
         WebView browser=(WebView)findViewById(R.id.Toweb);
+        browser.getSettings().setJavaScriptEnabled(true);
+        browser.getSettings().setBlockNetworkImage(false);
         browser.loadUrl("http://mp.weixin.qq.com/s/qVDQb6DcWngbWTHoL6siNA");
 
         //设置可自由缩放网页
