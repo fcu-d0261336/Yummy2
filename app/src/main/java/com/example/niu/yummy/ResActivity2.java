@@ -5,9 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class ResActivity2 extends AppCompatActivity {
 
+    ListView lv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,6 +20,14 @@ public class ResActivity2 extends AppCompatActivity {
         main_button.setOnClickListener(back_main);
         Button cuisine_button=(Button)findViewById(R.id.cuisine_btn);
         cuisine_button.setOnClickListener(cuisine);
+
+        ArrayList<PutPtr> ResItem = new ArrayList<PutPtr>();
+        ResItem.add(new PutPtr(R.drawable.res_p1));
+        ResItem.add(new PutPtr(R.drawable.res_p2));
+        ResItem.add(new PutPtr(R.drawable.res_p3));
+        AlbumAdapter adapter=new AlbumAdapter(this,ResItem);
+        lv =(ListView)findViewById(R.id.res);
+        lv.setAdapter(adapter);
     }
     private View.OnClickListener back_main=new View.OnClickListener() {
         @Override

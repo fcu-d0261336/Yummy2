@@ -9,8 +9,12 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.view.View.OnClickListener;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class CuisineActivity2 extends AppCompatActivity {
+    ListView lv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +24,14 @@ public class CuisineActivity2 extends AppCompatActivity {
         main_button.setOnClickListener(back_main);
         Button res_button=(Button)findViewById(R.id.res_btn);
         res_button.setOnClickListener(res);
+
+        ArrayList<PutPtr> albumItem = new ArrayList<PutPtr>();
+        albumItem.add(new PutPtr(R.drawable.p1));
+        albumItem.add(new PutPtr(R.drawable.p2));
+
+        AlbumAdapter adapter=new AlbumAdapter(this,albumItem);
+        lv =(ListView)findViewById(R.id.lv);
+        lv.setAdapter(adapter);
 /////////////////////////////////////////////////////////////////////////////////////////////
         //WebView
         WebView browser=(WebView)findViewById(R.id.Toweb);

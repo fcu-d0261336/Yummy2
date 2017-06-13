@@ -48,7 +48,13 @@
             android:layout_height="0dp"
             android:layout_weight="7.8"
             android:orientation="vertical"
-            android:visibility="visible"></RelativeLayout>
+            android:visibility="visible">
+
+            <ListView
+                android:id="@+id/res"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
 
         <LinearLayout
             android:id="@+id/bottom_bar"
