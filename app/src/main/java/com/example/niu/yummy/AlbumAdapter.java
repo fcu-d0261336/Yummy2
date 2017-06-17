@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Parcelable;
 import android.support.v4.media.session.PlaybackStateCompat;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
@@ -15,13 +16,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import java.net.URL;
 import java.util.List;
 import android.view.View.OnClickListener;
 /**
@@ -48,52 +53,8 @@ public class AlbumAdapter extends ArrayAdapter<PutPtr> {
 
         ImageView host=(ImageView) itemlayout.findViewById(R.id.iv);
         host.setImageResource(item.getPictureId());
-        TextView ptr_url=(TextView)itemlayout.findViewById(R.id.tv_url);
+        final TextView ptr_url=(TextView)itemlayout.findViewById(R.id.tv_url);
         ptr_url.setText(item.getPtr_url());
-
-        GetUrl getUrl=new GetUrl();
-        getUrl.interceptHyperLink(ptr_url);
-
         return itemlayout;
     }
-    /*private void interceptHyperLink(TextView tv) {
-        tv.setMovementMethod(LinkMovementMethod.getInstance());
-        CharSequence text = tv.getText();
-        if (text instanceof Spannable) {
-            int end = text.length();
-            Spannable spannable = (Spannable) tv.getText();
-            URLSpan[] urlSpans = spannable.getSpans(0, end, URLSpan.class);
-            if (urlSpans.length == 0) {
-                return;
-            }
-
-            SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(text);
-            // 循环遍历并拦截 所有http://开头的链接
-            for (URLSpan uri : urlSpans) {
-                String url = uri.getURL();
-                if (url.indexOf("http://") == 0) {
-                    CustomUrlSpan customUrlSpan = new CustomUrlSpan(this,url);
-                    spannableStringBuilder.setSpan(customUrlSpan, spannable.getSpanStart(uri),
-                            spannable.getSpanEnd(uri), Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
-                }
-            }
-            tv.setText(spannableStringBuilder);
-        }
-    }
-    public class CustomUrlSpan extends ClickableSpan{
-        private Context context;
-        private String url;
-
-        public CustomUrlSpan(Context context, String url) {
-            this.context = context;
-            this.url = url;
-        }
-
-        @Override
-        public void onClick(View view) {
-            Intent intent=new Intent(context,WebViewActivity.class);
-            intent.putExtra(WebViewActivity.WEB_URL,url);
-            context.startActivity(intent);
-        }
-    }*/
 }

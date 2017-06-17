@@ -12,13 +12,17 @@ import android.text.style.URLSpan;
 import android.view.View;
 import android.widget.TextView;
 
+import java.net.URL;
+
 /**
  * Created by 路人 on 2017/6/17.
  */
 
 public class GetUrl extends AppCompatActivity{
+    /*Intent intent=getIntent();
+    String input=intent.getStringExtra("URL");
 
-    public void interceptHyperLink(TextView tv) {
+    private void interceptHyperLink(TextView tv) {
 
         tv.setMovementMethod(LinkMovementMethod.getInstance());
         CharSequence text = tv.getText();
@@ -58,6 +62,6 @@ public class GetUrl extends AppCompatActivity{
             intent.putExtra(WebViewActivity.WEB_URL,url);
             context.startActivity(intent);
         }
-    }
+    }*/
 
 }

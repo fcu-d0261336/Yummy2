@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -28,6 +29,27 @@ public class ResActivity2 extends AppCompatActivity {
         AlbumAdapter adapter=new AlbumAdapter(this,ResItem);
         lv =(ListView)findViewById(R.id.res);
         lv.setAdapter(adapter);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String url=null;
+                switch (i){
+                    case 0:
+                        url="http://mp.weixin.qq.com/s/qXuXhBu6nuvWleKnrWbUFA";
+                        break;
+                    case 1:
+                        url="http://mp.weixin.qq.com/s/Xlnylj4RXxT28d0qO4E3nQ";
+                        break;
+                    case 2:
+                        url="http://mp.weixin.qq.com/s/Qc1-xFkhC34YSP1IAHVWpwv";
+                        break;
+                }
+                Intent intent=new Intent();
+                intent.setClass(ResActivity2.this,WebViewActivity.class);
+                intent.putExtra("ptr_url",url);
+                startActivity(intent);
+            }
+        });
     }
     private View.OnClickListener back_main=new View.OnClickListener() {
         @Override
