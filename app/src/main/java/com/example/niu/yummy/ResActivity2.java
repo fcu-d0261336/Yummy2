@@ -22,9 +22,9 @@ public class ResActivity2 extends AppCompatActivity {
         cuisine_button.setOnClickListener(cuisine);
 
         ArrayList<PutPtr> ResItem = new ArrayList<PutPtr>();
-        ResItem.add(new PutPtr(R.drawable.res_p1));
-        ResItem.add(new PutPtr(R.drawable.res_p2));
-        ResItem.add(new PutPtr(R.drawable.res_p3));
+        ResItem.add(new PutPtr(R.drawable.res_p1,"http://mp.weixin.qq.com/s/qXuXhBu6nuvWleKnrWbUFA"));
+        ResItem.add(new PutPtr(R.drawable.res_p2,"http://mp.weixin.qq.com/s/Xlnylj4RXxT28d0qO4E3nQ"));
+        ResItem.add(new PutPtr(R.drawable.res_p3,"http://mp.weixin.qq.com/s/Qc1-xFkhC34YSP1IAHVWpwv"));
         AlbumAdapter adapter=new AlbumAdapter(this,ResItem);
         lv =(ListView)findViewById(R.id.res);
         lv.setAdapter(adapter);

@@ -3,19 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:weightSum="1">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="167dp"
-        android:baselineAligned="false"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:weightSum="1">
 
-        <ImageButton
-            android:id="@+id/imgButton1"
+        <ImageView
+            android:id="@+id/iv"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="223dp" />
 
+        <TextView
+            android:id="@+id/tv_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
-
 </LinearLayout>

@@ -6,9 +6,20 @@ package com.example.niu.yummy;
 
 public class PutPtr {
     private int PictureId;
+    private String ptr_url;
 
-    public PutPtr(int pictureId) {
+    public PutPtr(int pictureId, String ptr_url) {
         PictureId = pictureId;
+        this.ptr_url = ptr_url;
+    }
+
+
+    public String getPtr_url() {
+        return ptr_url;
+    }
+
+    public void setPtr_url(String ptr_url) {
+        this.ptr_url = ptr_url;
     }
 
     public int getPictureId() {

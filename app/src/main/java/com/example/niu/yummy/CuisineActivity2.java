@@ -26,8 +26,8 @@ public class CuisineActivity2 extends AppCompatActivity {
         res_button.setOnClickListener(res);
 
         ArrayList<PutPtr> albumItem = new ArrayList<PutPtr>();
-        albumItem.add(new PutPtr(R.drawable.p1));
-        albumItem.add(new PutPtr(R.drawable.p2));
+        albumItem.add(new PutPtr(R.drawable.p1,"http://mp.weixin.qq.com/s/qvc8d25UWN-mvBaCKwYe5A"));
+        albumItem.add(new PutPtr(R.drawable.p2,"http://mp.weixin.qq.com/s/4zS0PYhZTZfaCc9bNxE1Lw"));
 
         AlbumAdapter adapter=new AlbumAdapter(this,albumItem);
         lv =(ListView)findViewById(R.id.lv);
