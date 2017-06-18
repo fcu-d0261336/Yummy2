@@ -16,12 +16,10 @@ import java.net.URL;
 
 /**
  * Created by 路人 on 2017/6/17.
+ * 暂时无用的将Text转为URL的功能
  */
 
 public class GetUrl extends AppCompatActivity{
-    //Intent intent=getIntent();
-    //String input=intent.getStringExtra("URL");
-
     private void interceptHyperLink(TextView tv) {
 
         tv.setMovementMethod(LinkMovementMethod.getInstance());

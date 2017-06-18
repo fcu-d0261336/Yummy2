@@ -31,6 +31,7 @@ import java.util.List;
 import android.view.View.OnClickListener;
 /**
  * Created by 路人 on 2017/5/14.
+ * 处理listview的adapter
  */
 
 public class AlbumAdapter extends ArrayAdapter<PutPtr> {
