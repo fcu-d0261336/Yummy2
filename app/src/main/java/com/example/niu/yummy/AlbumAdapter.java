@@ -53,7 +53,7 @@ public class AlbumAdapter extends ArrayAdapter<PutPtr> {
 
         ImageView host=(ImageView) itemlayout.findViewById(R.id.iv);
         host.setImageResource(item.getPictureId());
-        final TextView ptr_url=(TextView)itemlayout.findViewById(R.id.tv_url);
+        TextView ptr_url=(TextView)itemlayout.findViewById(R.id.tv_url);
         ptr_url.setText(item.getPtr_url());
         return itemlayout;
     }

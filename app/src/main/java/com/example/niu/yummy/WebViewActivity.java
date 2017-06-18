@@ -14,7 +14,7 @@ import android.webkit.WebViewClient;
  */
 
 public class WebViewActivity extends Activity {
-    //public static final String WEB_URL="url";
+    public static final String WEB_URL="url";
     private WebView wv_content;
     private String url;
     @Override
@@ -28,14 +28,13 @@ public class WebViewActivity extends Activity {
     private void getBundleData(){
         Intent intent=getIntent();
         if(intent!=null) {
-            url =intent.getStringExtra("ptr_url");
+            url =intent.getStringExtra(WEB_URL);
         }
     }
     private void initData(){
-        WebSettings settings=wv_content.getSettings();
+        WebSettings settings = wv_content.getSettings();
         settings.setJavaScriptEnabled(true);
-        settings.setBlockNetworkImage(false);
-        /*wv_content.setWebViewClient(new WebViewClient(){
+        wv_content.setWebViewClient(new WebViewClient(){
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
@@ -45,15 +44,7 @@ public class WebViewActivity extends Activity {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 return super.shouldOverrideUrlLoading(view, url);
             }
-        });*/
-        wv_content.setWebViewClient(new WebViewClient() {
-            public boolean shouldOverrideUrlLoading(WebView view, String url)
-            {
-                //  重写此方法表明点击网页里面的链接还是在当前的webview里跳转，不跳到浏览器那边
-                view.loadUrl(url);
-                return true;
-            }
         });
-        //wv_content.loadUrl(url);
+        wv_content.loadUrl(url);
     }
 }

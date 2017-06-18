@@ -14,11 +14,12 @@
         <ImageView
             android:id="@+id/iv"
             android:layout_width="match_parent"
-            android:layout_height="223dp" />
+            android:layout_height="313dp" />
 
         <TextView
             android:id="@+id/tv_url"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:autoLink="web"/>
     </LinearLayout>
 </LinearLayout>

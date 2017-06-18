@@ -19,8 +19,8 @@ import java.net.URL;
  */
 
 public class GetUrl extends AppCompatActivity{
-    /*Intent intent=getIntent();
-    String input=intent.getStringExtra("URL");
+    //Intent intent=getIntent();
+    //String input=intent.getStringExtra("URL");
 
     private void interceptHyperLink(TextView tv) {
 
@@ -62,6 +62,6 @@ public class GetUrl extends AppCompatActivity{
             intent.putExtra(WebViewActivity.WEB_URL,url);
             context.startActivity(intent);
         }
-    }*/
+    }
 
 }
